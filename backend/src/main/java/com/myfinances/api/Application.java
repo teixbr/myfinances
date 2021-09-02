@@ -21,7 +21,7 @@ public class Application
 		SpringApplication.run( Application.class, args );
 	}
 
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application)
+	protected SpringApplicationBuilder configure( SpringApplicationBuilder application )
 	{
 		return application.sources( Application.class);
 	}
