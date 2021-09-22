@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <changeSet id="20210921-02-1" author="teixbr">
+        <insert tableName="account_type">
+            <column name="id" value="1"/>
+            <column name="name" value="Checking"/>
+        </insert>
+        <insert tableName="account_type">
+            <column name="id" value="2"/>
+            <column name="name" value="Savings"/>
+        </insert>
+        <insert tableName="currency">
+            <column name="id" value="1"/>
+            <column name="symbol" value="£"/>
+            <column name="abbreviation" value="GBP"/>
+        </insert>
+        <insert tableName="currency">
+            <column name="id" value="2"/>
+            <column name="symbol" value="$"/>
+            <column name="abbreviation" value="USD"/>
+        </insert>
+        <insert tableName="currency">
+            <column name="id" value="3"/>
+            <column name="symbol" value="VES"/>
+            <column name="abbreviation" value="VES"/>
+        </insert>
+        <insert tableName="transaction_detail_type">
+            <column name="id" value="1"/>
+            <column name="name" value="Commission"/>
+        </insert>
+        <insert tableName="transaction_detail_type">
+            <column name="id" value="2"/>
+            <column name="name" value="Value"/>
+        </insert>
+        <insert tableName="transaction_method">
+            <column name="id" value="1"/>
+            <column name="name" value="Card"/>
+        </insert>
+        <insert tableName="transaction_method">
+            <column name="id" value="2"/>
+            <column name="name" value="Zelle"/>
+        </insert>
+        <insert tableName="transaction_method">
+            <column name="id" value="3"/>
+            <column name="name" value="Transfer"/>
+        </insert>
+        <insert tableName="transaction_method">
+            <column name="id" value="4"/>
+            <column name="name" value="Cash"/>
+        </insert>
+        <insert tableName="transaction_reason">
+            <column name="id" value="1"/>
+            <column name="name" value="Salary"/>
+        </insert>
+        <insert tableName="transaction_reason">
+            <column name="id" value="2"/>
+            <column name="name" value="Payment"/>
+        </insert>
+        <insert tableName="transaction_reason">
+            <column name="id" value="3"/>
+            <column name="name" value="Money Move"/>
+        </insert>
+        <insert tableName="transaction_type">
+            <column name="id" value="1"/>
+            <column name="name" value="Credit"/>
+        </insert>
+        <insert tableName="transaction_type">
+            <column name="id" value="2"/>
+            <column name="name" value="Debit"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

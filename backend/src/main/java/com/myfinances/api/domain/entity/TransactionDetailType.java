@@ -19,7 +19,7 @@ import java.util.List;
  * @since 14/08/21
  */
 @Entity
-@Table( name = "person", schema = "public" )
+@Table( name = "transaction_detail_type", schema = "public" )
 public class TransactionDetailType extends BaseEntity
 {
     //region Attributes
@@ -35,7 +35,7 @@ public class TransactionDetailType extends BaseEntity
      * Name:                   Transaction List
      * Description:            List of TransactionDetail that contains a TransactionDetailType
      */
-    @OneToMany( mappedBy = "_transactionDetail", fetch = FetchType.LAZY, cascade = CascadeType.ALL )
+    @OneToMany( mappedBy = "_transactionDetailType", fetch = FetchType.LAZY, cascade = CascadeType.ALL )
     private List<TransactionDetail> _transactionDetailList;
 
     //endregion

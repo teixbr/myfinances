@@ -254,5 +254,15 @@ public class Transaction extends BaseEntity
         _person = person;
     }
 
+    public Account getAccount()
+    {
+        return _account;
+    }
+
+    public void setAccount( Account account )
+    {
+        _account = account;
+    }
+
     //endregion
 }

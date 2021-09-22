@@ -3,7 +3,7 @@ package com.myfinances.api.domain.enums;
 public enum CurrencyEnum
 {
     GBP( 1, "$", "GBP" ),
-    USD( 2, "$", "USD" ),
+    USD( 2, "£", "USD" ),
     VES( 3, "VES", "VES" );
 
     private final long value;

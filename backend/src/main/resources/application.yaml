@@ -12,7 +12,7 @@ spring:
       ddl-auto: update
     show-sql: false
   datasource:
-    url: jdbc:h2:mem:flexiDB
+    url: jdbc:h2:mem:myFinancesDB
     username: sa
     password: password
     driver-class-name: org.h2.Driver
@@ -25,11 +25,12 @@ spring:
       org.springframework.web: DEBUG
       guru.springframework.controllers: DEBUG
       org.hibernate: DEBUG
-
+  liquibase:
+    change-log: "classpath:config/liquibase/master.xml"
 server:
   port: 8080
   servlet:
-    context-path: ''
+    context-path: '/api'
 ---
 h2-server:
   port: 8081

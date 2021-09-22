@@ -33,7 +33,7 @@ public class Account extends BaseEntity
      * Description:            Foreign key of Account-AccountType
      */
     @ManyToOne
-    @JoinColumn( name = "fk_acountype" )
+    @JoinColumn( name = "fk_accounttype" )
     private AccountType _accountType;
 
     /**
@@ -54,7 +54,6 @@ public class Account extends BaseEntity
      */
     public Account()
     {
-
     }
 
     /**

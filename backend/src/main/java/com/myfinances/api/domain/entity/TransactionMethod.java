@@ -35,7 +35,7 @@ public class TransactionMethod extends BaseEntity
      * Name:                   Transaction List
      * Description:            List of Transaction that contains a TransactionMethod
      */
-    @OneToMany( mappedBy = "transactionMethod", fetch = FetchType.LAZY, cascade = CascadeType.ALL )
+    @OneToMany( mappedBy = "_transactionMethod", fetch = FetchType.LAZY, cascade = CascadeType.ALL )
     private List<Transaction> _transactionList;
 
     //endregion

@@ -2,7 +2,9 @@ package com.myfinances.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +16,7 @@ import java.util.Collections;
 
 @SpringBootApplication
 @Configuration
+@EnableConfigurationProperties({ LiquibaseProperties.class })
 @ComponentScan("com.myfinances")
 public class Application
 {
@@ -30,9 +33,11 @@ public class Application
 	public RestTemplate restTemplate()
 	{
 		RestTemplate restTemplate = new RestTemplate();
-		MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter = new MappingJackson2HttpMessageConverter();
+		MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter =
+				new MappingJackson2HttpMessageConverter();
 		mappingJackson2HttpMessageConverter.setSupportedMediaTypes( Collections.singletonList( MediaType.ALL) );
 		restTemplate.getMessageConverters().add(mappingJackson2HttpMessageConverter);
+
 		return restTemplate;
 	}
 }
