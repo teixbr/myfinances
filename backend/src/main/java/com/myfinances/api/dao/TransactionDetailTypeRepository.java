@@ -5,8 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * System:                 FlexiTest
- * Name:                   MyFinancesAPI
+ * System:                 MyFinancesAPI
+ * Name:                   TransactionDetailTypeRepository
  * Description:            Interface that handles access to the DB for the TransactionDetailType entity
  *
  * @author teixbr
@@ -14,5 +14,5 @@ import org.springframework.stereotype.Repository;
  * @since 21/09/21
  */
 @Repository
-public interface TransactionDetailTypeRepository extends JpaRepository<TransactionDetailType,Long>
+public interface TransactionDetailTypeRepository extends JpaRepository<TransactionDetailType, Long>
 {}

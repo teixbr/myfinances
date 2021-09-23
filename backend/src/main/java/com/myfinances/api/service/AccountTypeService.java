@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author teixbr
  * @version 1.0
- * @since 14/08/21
+ * @since 21/09/21
  */
 public interface AccountTypeService
 {

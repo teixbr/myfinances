@@ -1,7 +1,7 @@
 package com.myfinances.api.rest;
 
-import com.myfinances.api.domain.DTO.AccountTypeDTO;
-import com.myfinances.api.service.impl.AccountTypeServiceImpl;
+import com.myfinances.api.domain.DTO.CurrencyDTO;
+import com.myfinances.api.service.impl.CurrencyServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,37 +15,37 @@ import java.util.List;
 
 /**
  * System:                 MyFinancesAPI
- * Name:                   AccountTypeController
- * Description:            Class that serves as proxy for all services available for the AccountType entity
+ * Name:                   CurrencyController
+ * Description:            Class that serves as proxy for all services available for the Currency entity
  *
  * @author teixbr
  * @version 1.0
- * @since 21/09/21
+ * @since 22/09/21
  */
 @RestController
-@RequestMapping("/accounttype")
-public class AccountTypeController extends BaseController
+@RequestMapping("/currency")
+public class CurrencyController extends BaseController
 {
-    private static final Logger _logger = LoggerFactory.getLogger( AccountTypeController.class );
+    private static final Logger _logger = LoggerFactory.getLogger( CurrencyController.class );
 
     @Autowired
-    private AccountTypeServiceImpl _service;
+    private CurrencyServiceImpl _service;
 
     /**
      * Find all transaction status
      *
-     * @return List<AccountTypeDTO>
+     * @return List<CurrencyDTO>
      */
     @GetMapping( "/all" )
-    public ResponseEntity<List<AccountTypeDTO>> getAllAccountType()
+    public ResponseEntity<List<CurrencyDTO>> getAllCurrency()
     {
-        _logger.debug( "getAllAccountType :: IN" );
+        _logger.debug( "getAllCurrency :: IN" );
 
         try
         {
-            final List<AccountTypeDTO> answer = _service.findAll();
+            final List<CurrencyDTO> answer = _service.findAll();
 
-            _logger.debug( "getAllAccountType :: OUT" );
+            _logger.debug( "getAllCurrency :: OUT" );
 
             return new ResponseEntity<>( answer, HttpStatus.OK );
         }

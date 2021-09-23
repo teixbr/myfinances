@@ -9,22 +9,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * System:                 FlexiTest
+ * System:                 MyFinancesAPI
  * Name:                   AccountTypeMapper
  * Description:            Class for handling mapping between Dto´s and AccountType Entity classes
  *
  * @author teixbr
  * @version 1.0
- * @since 14/08/21
+ * @since 21/09/21
  */
 public class AccountTypeMapper extends BaseMapper
 {
     public static List<AccountTypeDTO> mapEntityToDtoList( List<AccountType> entityList )
     {
-        return new ArrayList<AccountTypeDTO>() {{
+        return new ArrayList<AccountTypeDTO>()
+        {{
             if ( !entityList.isEmpty() )
             {
-                for( AccountType entity : entityList )
+                for ( AccountType entity : entityList )
                 {
                     add( mapEntityToDto( entity ) );
                 }

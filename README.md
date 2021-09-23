@@ -5,3 +5,6 @@ H2 Console:
     - Credentials:
         - User: sa
         - Password: password
+
+Swagger:
+    - Url: http://localhost:8080/api/swagger-ui.html#/

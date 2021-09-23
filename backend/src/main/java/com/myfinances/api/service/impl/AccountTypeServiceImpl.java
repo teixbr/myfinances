@@ -25,19 +25,19 @@ import java.util.List;
 @Service
 public class AccountTypeServiceImpl implements AccountTypeService
 {
-    private static final Logger logger = LoggerFactory.getLogger( AccountTypeServiceImpl.class );
+    private static final Logger _logger = LoggerFactory.getLogger( AccountTypeServiceImpl.class );
 
     @Autowired
-    private AccountTypeRepository repository;
+    private AccountTypeRepository _repository;
 
     @Override
     public List<AccountTypeDTO> findAll()
     {
-        logger.debug( "findAll :: IN" );
+        _logger.debug( "findAll :: IN" );
 
-        List<AccountTypeDTO> list = AccountTypeMapper.mapEntityToDtoList( repository.findAll() );
+        final List<AccountTypeDTO> list = AccountTypeMapper.mapEntityToDtoList( _repository.findAll() );
 
-        logger.debug( "findAll :: OUT" );
+        _logger.debug( "findAll :: OUT" );
 
         return list;
     }
@@ -45,12 +45,12 @@ public class AccountTypeServiceImpl implements AccountTypeService
     @Override
     public AccountTypeDTO findById( AccountType AccountType )
     {
-        logger.debug( "findById :: IN" );
+        _logger.debug( "findById :: IN" );
 
-        AccountTypeDTO answer = AccountTypeMapper.mapEntityToDto(
-                repository.findById( AccountType.getId() ).orElseThrow( MyFiNotFoundException::new ) );
+        final AccountTypeDTO answer = AccountTypeMapper.mapEntityToDto(
+                _repository.findById( AccountType.getId() ).orElseThrow( MyFiNotFoundException::new ) );
 
-        logger.debug( "findById :: OUT" );
+        _logger.debug( "findById :: OUT" );
 
         return answer;
     }

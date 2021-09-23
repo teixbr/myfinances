@@ -5,8 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * System:                 FlexiTest
- * Name:                   MyFinancesAPI
+ * System:                 MyFinancesAPI
+ * Name:                   BankRepository
  * Description:            Interface that handles access to the DB for the Bank entity
  *
  * @author teixbr
@@ -14,5 +14,5 @@ import org.springframework.stereotype.Repository;
  * @since 21/09/21
  */
 @Repository
-public interface BankRepository extends JpaRepository<Bank,Long>
+public interface BankRepository extends JpaRepository<Bank, Long>
 {}

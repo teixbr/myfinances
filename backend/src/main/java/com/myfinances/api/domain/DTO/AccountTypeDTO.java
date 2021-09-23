@@ -19,13 +19,21 @@ public class AccountTypeDTO extends BaseDTO
 
     //region Constructors
 
+    /**
+     * Name:                AccountTypeDTO
+     * Description:         Method to initializes a AccountType DTO (Empty constructor)
+     */
+    public AccountTypeDTO()
+    {
+    }
+
+    /**
+     * Name:                AccountTypeDTO
+     * Description:         Method to initializes a AccountType DTO
+     */
     public AccountTypeDTO( long id )
     {
         super( id );
-    }
-
-    public AccountTypeDTO()
-    {
     }
 
     //endregion
